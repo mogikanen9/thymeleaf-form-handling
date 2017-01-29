@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Account Validation Results</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Result</h1>
+    <p th:text="'number: ' + ${account.number}" />
+    <p th:text="'code: ' + ${account.code}" />
+    <p th:text="'billingNumber: ' + ${account.billingNumber}" />
+    <a href="/account">Validate another account</a>
+</body>
+</html>

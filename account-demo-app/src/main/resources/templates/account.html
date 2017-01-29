@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Validate Account</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Account</h1>
+    <form action="#" th:action="@{/account}" th:object="${account}" method="post">
+    	<p>Number: <input type="text" th:field="*{number}" /></p>
+        <p>Code: <input type="text" th:field="*{code}" /></p>
+        <p>BIlling number: <input type="text" th:field="*{billingNumber}" /></p>
+        <p><input type="submit" value="Validate" /> <input type="reset" value="Cancel" /></p>
+    </form>
+</body>
+</html>
