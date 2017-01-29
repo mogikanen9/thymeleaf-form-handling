@@ -33,12 +33,14 @@
 			<h1>Account</h1>
 			<form action="#" th:action="@{/account}" th:object="${account}"
 				method="post">
+				<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('number')}" th:errors="*{number}">Incorrect number</div>
 				<p>
-					Number: <input type="text" th:field="*{number}" />
+					Number: <input type="text" th:field="*{number}"/>
 				</p>
 				<p>
 					Code: <input type="text" th:field="*{code}" />
 				</p>
+				<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('billingNumber')}" th:errors="*{billingNumber}">Incorrect billing number</div>
 				<p>
 					BIlling number: <input type="text" th:field="*{billingNumber}" />
 				</p>

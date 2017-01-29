@@ -1,9 +1,16 @@
 package com.mogikanensoftware.demoapp.form;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Account{
 
+	@Size(min=10, max=10)
 	private String number;
 	private String code;
+	
+	@NotEmpty
 	private String billingNumber;
 	
 	public String getNumber() {
