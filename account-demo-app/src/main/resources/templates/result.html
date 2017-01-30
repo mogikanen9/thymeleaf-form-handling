@@ -30,9 +30,9 @@
 		<div class="jumbotron">
 			<h1>Result</h1>
 			<p th:text="'Number: ' + ${account.number}" />
-			<p th:text="'Vode: ' + ${account.code}" />
+			<p th:text="'Code: ' + ${account.code}" />
 			<p th:text="'BillingNumber: ' + ${account.billingNumber}" />
-
+			<p th:text="'Fee Service Code: ' + ${account.fscCode.code}+' - '+${account.fscCode.name}" />
 			<a href="/account">Validate another account</a>
 		</div>
 	</div>
