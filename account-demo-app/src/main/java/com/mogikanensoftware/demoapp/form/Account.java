@@ -14,6 +14,16 @@ public class Account {
 	@NotEmpty
 	private String billingNumber;
 
+	private Boolean fscEnabled = null;
+	
+	public Boolean getFscEnabled() {
+		return fscEnabled;
+	}
+
+	public void setFscEnabled(Boolean fscEnabled) {
+		this.fscEnabled = fscEnabled;
+	}
+
 	private FeeServiceCode fscCode;
 
 	public FeeServiceCode getFscCode() {

@@ -23,9 +23,10 @@ public class ThymeleafConfig {
 	public FeeServiceCodeFormatter feeServiceCodeFormatter() {
 		return new FeeServiceCodeFormatter(feeServiceCodeService());
 	}
-	
+
 	@Bean
-	public FeeServiceCodeService feeServiceCodeService(){
+	public FeeServiceCodeService feeServiceCodeService() {
 		return new DummyFeeServiceCodeServiceImpl();
 	}
+
 }
