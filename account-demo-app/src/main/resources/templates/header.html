@@ -1,8 +1,10 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Account Validation Results</title>
+<head th:fragment="common">
+
+<title>Validate Account</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -17,24 +19,14 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="h/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<style>
+.make-background-grey {
+	/*background-color: graytext;*/
+	color: graytext;
+}
+</style>
+
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1>Result</h1>
-			<p th:text="'Number: ' + ${account.number}" />
-			<p th:text="'Code: ' + ${account.code}" />
-			<p th:text="'BillingNumber: ' + ${account.billingNumber}" />
-
-			<div th:if="${account.fscCode} != null">
-				<p
-					th:text="'Fee Service Code: ' + ${account.fscCode.code}+' - '+${account.fscCode.name}" />
-			</div>
-			<a href="/account">Validate another account</a>
-		</div>
-
-		<!-- footer -->
-		<div th:include="footer :: copy"></div>
-	</div>
 </body>
 </html>

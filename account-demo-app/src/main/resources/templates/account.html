@@ -1,47 +1,28 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Validate Account</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
-
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
-
-<script src="/webjars/jquery/1.12.4/jquery.min.js"
-	type="text/javascript"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="h/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<style>
-.make-background-grey {
-	/*background-color: graytext;*/
-	color: graytext;
-}
-</style>
-<script type="text/javascript">
-	$(document).ready(
-			function() {
-				$("#fscEnabled1").click(
-						function() {
-							if ($("#fscEnabled1").is(':checked')) {
-								$("#fscCode").removeClass(
-										"make-background-grey").prop(
-										"disabled", false);
-							} else {
-								$("#fscCode").addClass("make-background-grey")
-										.prop("disabled", true);
-							}
-
-						});
-			});
-</script>
+<head th:replace="header :: common">
 </head>
 <body>
+
+	<script type="text/javascript">
+		$(document).ready(
+				function() {
+					$("#fscEnabled1").click(
+							function() {
+								if ($("#fscEnabled1").is(':checked')) {
+									$("#fscCode").removeClass(
+											"make-background-grey").prop(
+											"disabled", false);
+								} else {
+									$("#fscCode").addClass(
+											"make-background-grey").prop(
+											"disabled", true);
+								}
+
+							});
+				});
+	</script>
+
 	<div class="container">
 		<div class="jumbotron">
 			<h2 th:text="#{account.header}">Account2</h2>
@@ -113,6 +94,10 @@
 				</div>
 			</form>
 		</div>
+
+		<!-- footer -->
+		<div th:include="footer :: copy"></div>
+
 	</div>
 </body>
 </html>
