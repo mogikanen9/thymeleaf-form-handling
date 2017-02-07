@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header :: common">
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h2 th:text="#{account.header}">Account3</h2>
+			<table class="table">
+				<tr>
+					<td th:text="#{account.label.number}"></td>
+					<td th:text="${account.number}"></td>
+				</tr>
+				<tr>
+					<td th:text="#{account.label.code}"></td>
+					<td th:text="${account.code}"></td>
+				</tr>
+				<tr>
+					<td th:text="#{account.label.billingNumber}"></td>
+					<td th:text="${account.billingNumber}"></td>
+				</tr>	
+					<tr th:if="${account.fscCode} != null">
+					<td th:text="#{account.label.feeService}"></td>
+					<td th:text="${account.fscCode.code}+' - '+${account.fscCode.name}"></td>
+				</tr>		
+			</table>
+			
+			<a href="/account">Validate another account</a>
+		</div>
+
+		<!-- footer -->
+		<div th:include="footer :: copy"></div>
+	</div>
+</body>
+</html>
