@@ -12,3 +12,7 @@
 hs_err_pid*
 
 account-demo-app/src/main/resources/rebel.xml
+
+*.prefs
+
+.project
